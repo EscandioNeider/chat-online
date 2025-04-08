@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="geral.css">
+  <title>Chat</title>
+</head>
+
+<body>
+  <!-- Header Superior -->
+  <div class="barra-superior">
+    <div>
+      <img src="img/menu.svg" id="iconMenu" alt="">
+      <a href="index.html"><img src="img/google-icon.svg" id="logo" alt="icon"></a>
+      <p>Chat</p>
+
+    </div>
+    <!-- Barra de pesquisa -->
+    <div id="search-bar">
+      <img src="img/lupa.svg" alt="">
+      <input type="text" placeholder="Pesquise no chat">
+    </div>
+    <!-- Icones -->
+    <div id="iconesHeader">
+      <!-- icone de ajuda -->
+      <!-- <img src="img/ajuda.svg" alt=""> -->
+      <svg onclick="decorativo()" id="item-decorativo" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="CurrentColor"
+        focusable="false">
+        <path fill="none" d="M0 0h24v24H0z"></path>
+        <path
+          d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z">
+        </path>
+      </svg>
+      <!-- icone de configurações -->
+      <svg class="icone-rotaciona" onclick="config()" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M13.85 22.25h-3.7c-.74 0-1.36-.54-1.45-1.27l-.27-1.89c-.27-.14-.53-.29-.79-.46l-1.8.72c-.7.26-1.47-.03-1.81-.65L2.2 15.53c-.35-.66-.2-1.44.36-1.88l1.53-1.19c-.01-.15-.02-.3-.02-.46 0-.15.01-.31.02-.46l-1.52-1.19c-.59-.45-.74-1.26-.37-1.88l1.85-3.19c.34-.62 1.11-.9 1.79-.63l1.81.73c.26-.17.52-.32.78-.46l.27-1.91c.09-.7.71-1.25 1.44-1.25h3.7c.74 0 1.36.54 1.45 1.27l.27 1.89c.27.14.53.29.79.46l1.8-.72c.71-.26 1.48.03 1.82.65l1.84 3.18c.36.66.2 1.44-.36 1.88l-1.52 1.19c.01.15.02.3.02.46s-.01.31-.02.46l1.52 1.19c.56.45.72 1.23.37 1.86l-1.86 3.22c-.34.62-1.11.9-1.8.63l-1.8-.72c-.26.17-.52.32-.78.46l-.27 1.91c-.1.68-.72 1.22-1.46 1.22zm-3.23-2h2.76l.37-2.55.53-.22c.44-.18.88-.44 1.34-.78l.45-.34 2.38.96 1.38-2.4-2.03-1.58.07-.56c.03-.26.06-.51.06-.78s-.03-.53-.06-.78l-.07-.56 2.03-1.58-1.39-2.4-2.39.96-.45-.35c-.42-.32-.87-.58-1.33-.77l-.52-.22-.37-2.55h-2.76l-.37 2.55-.53.21c-.44.19-.88.44-1.34.79l-.45.33-2.38-.95-1.39 2.39 2.03 1.58-.07.56a7 7 0 0 0-.06.79c0 .26.02.53.06.78l.07.56-2.03 1.58 1.38 2.4 2.39-.96.45.35c.43.33.86.58 1.33.77l.53.22.38 2.55z">
+        </path>
+        <circle cx="12" cy="12" r="3.5"></circle>
+      </svg>
+
+      <!-- div que abre as configuraçoes -->
+      <div id="abre-config" style="display: none;">
+        <!-- botao para mudar o tema -->
+        <!-- <button onclick="alternarTema()"> mudar tema </button> -->
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider" onclick="alternarTema()"></span>
+      </label>
+      </div>
+      <!-- icone apps -->
+      <img src="img/apps.svg" onclick="decorativo()" id="item-decorativo" alt="">
+
+      <!-- icone user -->
+      <img src="img/user.svg" onclick="decorativo()" id="item-decorativo" alt="">
+    </div>
+  </div>
+
+
+  </div>
+
+  <!-- Barra lateral esquerda -->
+  <div id="barra-esquerda" class="barra-esquerda tema-escuro">
+    <button class="botao-branco-chat" onclick="abrirFormularioSala()">
+      <!-- inserir um svg de mensagem aqui -->
+      <svg id="svgNovoChat" xmls="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor">
+        <path
+          d="M3 20V5q0-.825.587-1.413Q4.175 3 5 3h12q.825 0 1.413.587Q19 4.175 19 5v5.075q-.25-.05-.5-.063Q18.25 10 18 10t-.5.012q-.25.013-.5.063V5H5v10h7.075q-.05.25-.063.5-.012.25-.012.5t.012.5q.013.25.063.5H6ZM7 9h8V7H7Zm0 4h5v-2H7Zm10 7v-3h-3v-2h3v-3h2v3h3v2h-3v3ZM5 15V5v10Z">
+        </path>
+      </svg>
+
+      Novo chat</button>
+    <br><br>
+    <!-- Formulário para nova sala -->
+    <div id="nova-sala-form" style="display: none; margin-top: 10px;">
+        <input type="text" id="nomeSalaInput" placeholder="Nome da nova sala" />
+        <button onclick="criarSala()">Criar</button>
+    </div>
+    <div class="sub-barra-esquerda">
+      <button onclick="decorativo()">Atalhos</button>
+      <br>
+      <button onclick="decorativo()" id="item-decorativo">Mensagens Diretas</button>
+      <br>
+      <button onclick="decorativo()" id="item-decorativo">Espaços</button>
+    </div>
+  </div>
+
+  <!-- centro da página -->
+  <div class="centro-pagina">
+
+    <!-- restante -->
+    <div class="restante">
+      <img src="" alt="">
+      <p class="titulo-grande">Seja Bem-vind@!</p>
+      <p class="sub-titulo">Preparar… Digitar… Conversar! Vamos direto ao que interessa</p>
+      <img src="img/restante-menina.svg" alt="">
+      <button id="botao-azul-claro" onclick="tiposDeChat()">Iniciar um Chat</button>
+
+      <div id="tipos-chat" style="display: none;">
+        <button id="dev-pag">Chat dos Devs</button>
+        <button id="amigos-pag">Chat dos Amigos</button>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>EscandioNeider</footer>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>

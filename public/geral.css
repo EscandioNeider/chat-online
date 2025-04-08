@@ -1,0 +1,619 @@
+/* GERAIS */
+*{
+    font-family: sans-serif;
+  }
+
+  body{
+    background-color: #F7F8FC;
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+  }
+
+  body.tema-escuro{
+    background-color:#28292a;
+    color: #efefef;
+  }
+
+  body.tema-escuro .barra-superior img:not(#logo),
+  body.tema-escuro .barra-superior svg{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(1%) hue-rotate(321deg) brightness(105%) contrast(101%);
+  }
+
+  
+  .titulo-grande{
+    font-size: 2.25em;
+  }
+
+  .sub-titulo{
+    font-size: 1em;
+  }
+
+  /* HEADER */
+  .barra-superior {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+    .barra-superior div{
+      margin: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    /* Tamanho da Logo */
+    #logo{
+      width: 35px;
+    }
+
+    /* Barra de Pesquisa */
+    #search-bar{
+      align-items: center;
+      padding: 5px 10px;
+      border: 0;
+      border-radius: 25px;
+      background-color: #E9EEF6;
+      width: 600px;
+    }
+
+    body.tema-escuro #search-bar{
+      background-color:#454647;
+    }
+
+    #search-bar input{
+      border: 0;
+      border-radius: 25px;
+      padding: 10px;
+      background-color: transparent;
+    }
+
+    body.tema-escuro #search-bar input{
+      color: #efefef;
+    }
+
+    /*  */
+    .icone-apps {
+      width: 20px;
+      height: 20px;
+      margin: 0 6px;
+      flex-shrink: 0; /* evita que ele encolha e deforme */
+    }
+    
+    #iconesHeader {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: nowrap;
+      margin: 0;
+    }
+    #iconesHeader *{
+      min-width: 24px
+    }
+    
+    /* rotaciona configurações */
+    .icone-rotaciona {
+      transition: transform 0.5s ease;
+    }
+    
+    .icone-rotaciona.girando {
+      transform: rotate(180deg);
+    }
+
+    /* The switch - the box around the slider */
+.switch {
+  display: block;
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon,1.4em);
+  width: var(--size-of-icon,1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset,0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg,#ffc400,#ff8c00 70%);
+  ;
+ transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #303136;
+  transform: translateX(5px);
+}
+
+input:checked + .slider:before {
+  left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+  background: #303136;
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+  box-shadow: inset -1px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+    
+  /* BARRA LATERAL ESQUERDA */
+  .barra-esquerda, .sub-barra-esquerda {
+    background-color: #f6f8fc;
+    float: left;
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 280px;
+    padding: 0px 0px 0px 0px;
+    flex-direction: column;
+  }
+
+  .sub-barra-esquerda button{
+    align-content: stretch;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  body.tema-escuro .barra-esquerda{
+    background-color:#28292a;
+    color: #efefef;
+  }
+
+  body.tema-escuro .sub-barra-esquerda{
+    background-color:#28292a;
+    color: #efefef;
+  }
+
+  .sub-barra-esquerda button{
+    background-color: rgba(255, 255, 255, 0);
+    text-align: left;
+    width: 100%;
+    border: none;
+    padding: 5px;
+  }
+
+  body.tema-escuro .sub-barra-esquerda button{
+    color: #efefef;
+  }
+
+  .sub-barra-esquerda button:hover{
+    transition: background-color 0.1.5s ease;
+    background-color: #d8e5f2;
+  }
+
+  body.tema-escuro .sub-barra-esquerda button:hover{
+    color: #28292a;
+    background-color: #bcc9d6b0;
+  }
+
+  #nova-sala-form{
+    position: relative;
+    margin-bottom: 50px;
+    width: 80%;
+  }
+
+  #nova-sala-form input{
+    width: 100%;
+    padding: 5px 5px 5px 5px;
+    box-sizing: border-box;
+    background-color: #88888838;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+
+  #nova-sala-form button{
+    position: absolute;
+    right: 5px;
+    top: 4px;
+    bottom: 4px;
+    padding: 1px 20px 5px 20px;
+    background-color: #87a8bd;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  body.tema-escuro #nova-sala-form button{
+    background-color: #8888888c;
+    border: solid 0.5px #13131370;
+    color: white;
+  }
+
+
+  /* Botão para criar nova sala */
+  .botao-branco-chat{
+    background-color: #fff;
+  padding: 16px 14px 16px 14px;
+  border-radius: 15px;
+  border: none;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 1px 3px 1px rgba(0, 0, 0, .15);
+  }
+
+  body.tema-escuro .botao-branco-chat{
+    background-color: #454647;
+    color: #efefef;
+  }
+
+  .barra-recolhida *{
+    display: none;
+  }
+
+  /* CENTRO */
+   .centro-pagina {
+    border-radius: 25px;
+    z-index: 1;
+  } 
+
+  /* Não lidos */
+  .nao-lidos, .nao-lidos h4 {
+    padding: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 200px;
+  float: right;
+  margin-top: 0;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: space-between
+  }
+
+  .nao-lidos h4 {
+    align-items: center;
+  }
+
+  /* "RESTANTE" */
+  .restante {
+    background-color:#ffffff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5px 20px 0;
+  }
+
+  body.tema-escuro .restante{
+    background-color: #131314;
+  }
+
+  .restante img{
+    width: 290px;
+    padding: 15px;
+  }
+
+  /* Botão (estilo "Iniciar um Chat") */
+  #botao-azul-claro{
+    background-color: #c2e7ff;
+    padding: 10px 30px;
+    border-radius: 25px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  #botao-azul-claro:hover{
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 1px 3px 1px rgba(0, 0, 0, .15);
+  }
+
+  body.tema-escuro #botao-azul-claro{
+    background-color: #075686;
+    color: #a7d2f0;
+  }
+
+  #botao-azul-claro:hover{
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 1px 3px 1px rgba(0, 0, 0, .15);
+  }
+
+  body.tema-escuro #botao-azul-claro:hover{
+    background-color: #106499;
+  }
+
+
+  /* Div com as salas de chat criadas */
+  #tipos-chat{
+    background-color:#e6e8ebd7;
+    padding: 15px;
+    flex-direction: column;
+    align-content: center;
+    gap: 5px;
+  }
+
+  #tipos-chat button{
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0);
+    border: none;
+  }
+
+  #tipos-chat button:hover{
+    transition: background-color 0.1.5s ease;
+    transform: scale(1.2);
+    background-color: #afceee;
+  }
+
+  /* Footer */
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    color: #fff;
+  }
+
+  /* CHATS */
+  .user-digitando{
+    padding: 10px 30px;
+    border-radius: 25px;
+    border: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    align-content: stretch;
+    justify-content: space-between;
+    flex-direction: row;
+    }
+
+    body.tema-escuro .user-digitando svg{ 
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(1%) hue-rotate(321deg) brightness(105%) contrast(101%);
+    }
+
+    #nome{
+        width: 150px;
+        text-align: center;
+        padding: 8px;
+        border-radius: 25px;
+        border: 0.5px solid rgba(70, 70, 70, 0.534);
+        background-color: #33333300;
+    }
+
+    body.tema-escuro #nome{
+      color: #efefef;
+    }
+
+    #mensagem{
+       width: 350px;
+    text-align: center;
+    background-color: #ffffff00;
+    border-radius: 25px;
+    border: 0.5px solid rgba(70, 70, 70, 0.534);
+    }
+
+    body.tema-escuro #mensagem{
+      color: #efefef;
+    }
+
+    #mensagem::placeholder{
+        text-align: center;
+        align-items: center;
+    }
+  
+
+  #campoMensagem{
+      display: none;
+      align-items: end;
+      height: 400px;
+    }
+
+    .minhaMsg{
+      margin-left: auto;
+    }
+
+  #mensagens{
+    width: 100%;
+    overflow-y: auto;
+    word-break: break-all;
+    padding: 10px;
+    display: flex;
+    border-radius: 25px;
+    gap: 5px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+  #mensagens li {
+      list-style-type: none;
+      max-width: 80%;
+      padding: 10px 15px;
+      margin-top: 2px;
+      margin-bottom: 2px;
+      border-radius: 15px;
+      word-wrap: break-word;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5px;
+    }
+
+    body.tema-escuro #mensagens li{
+      color: #efefef;
+    }
+
+    #mensagens li span:last-child {
+      font-size: 0.8em;
+      color: #888;
+      margin-left: 10px;
+    }
+    
+    body.tema-escuro #mensagens li span:last-child{
+      color: #efefef;
+    }
+
+    /* Mensagem do próprio usuário - alinhada à direita */
+    .mensagem-minha {
+      background-color: #c2e7ff;
+      align-self: flex-end;
+      text-align: right;
+    }
+
+    body.tema-escuro .mensagem-minha{
+      background-color:#003157;
+      color: #c2e7ff;
+    }
+
+    /* Mensagem de outra pessoa - alinhada à esquerda */
+    .mensagem-outro {
+      background-color: #e0e0e0;
+      align-self: flex-start;
+      text-align: left;
+    }
+
+    body.tema-escuro .mensagem-outro{
+      background-color: #303030;
+      color: #efefef;
+    }
+
+    #botao-enviar-chat img{
+      width: 20px;
+    }
+    body.tema-escuro #botao-enviar-chat img{
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(1%) hue-rotate(321deg) brightness(105%) contrast(101%);
+    }
+
+    #botao-enviar-chat{
+      border-radius: 100px;
+      height: 30px;
+      background-color: #33333300;
+      border: none;
+    }
+
+    /* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+  /* Esconde a barra lateral */
+  .barra-esquerda,
+  .sub-barra-esquerda {
+    display: none;
+  }
+
+  /* Mostra a barra recolhida (caso tenha botão ou menu hamburguer) */
+  .barra-recolhida {
+    display: block !important;
+  }
+
+  .restante{
+    padding: 0px 10px 5px 10px;
+  }
+
+  .div-barra-superior svg, .div-barra-superior img{
+    width: 8px;
+    height: 8px;
+  }
+  .restante img{
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  /* Ajusta botão de menu para aparecer */
+  .botao-menu {
+    display: block;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    margin: 10px;
+    cursor: pointer;
+    color: #ffffff;
+  }
+
+  /* Ajusta a barra de pesquisa */
+  #search-bar {
+    width: 90%;
+    margin: 10px auto;
+    padding: 5px;
+  }
+
+  #search-bar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  /* Ajusta área de digitação */
+  .user-digitando {
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+  }
+
+  #nome,
+  #mensagem {
+    width: 85%;
+    height: 20px;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  #mensagens li {
+    max-width: 95%;
+    word-wrap: break-word;
+  }
+
+ 
+  /* Evita rolagem lateral feia */
+  body {
+    overflow-x: hidden;
+    font-size: 14px;
+  }
+
+  /* Fontes gerais */
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  p,
+  li,
+  input,
+  button,
+  textarea,
+  label {
+    font-size: 14px;
+  }
+}
