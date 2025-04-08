@@ -19,4 +19,4 @@ Este projeto foi desenvolvido com o intuito de estudar e aplicar conceitos de:
 - CSS3;
 - JavaScript;
 
-🔗 Acesse meu projeto no Render: [GoogleChat](#chat-online.onrender.com) 
+🔗 Acesse meu projeto no Render: [GoogleChat](https://chat-online-r8yy.onrender.com)) 
