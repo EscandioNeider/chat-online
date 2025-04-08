@@ -246,6 +246,9 @@ input:checked + .slider:before {
     font-size: 14px;
   }
 
+ body.tema-escuro #nova-sala-form input{
+    color: white;
+  }
   body.tema-escuro #nova-sala-form button{
     background-color: #8888888c;
     border: solid 0.5px #13131370;
